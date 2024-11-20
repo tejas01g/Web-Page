@@ -1,0 +1,550 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background-color: #0052FF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.brand-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.brand-name span {
+  color: #0052FF;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.profile-pic {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #ddd;
+}
+
+.main-content {
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: blue;
+}
+
+.submit-btn {
+  background-color: #0052FF;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.content-card {border: 1px solid gray;
+  background-color: gainsboro;
+  padding: 2rem;
+  border-radius: 12px;
+}
+.left-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 300px;
+  width: 50px;
+  background-color:white;
+  color: white;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  z-index: 1000;
+}
+.icon-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  background-color: #0052FF;
+  border-radius: 50%;
+  display: flex;
+  margin-left: 1400px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.icon:hover {
+  background-color: #0043cc;
+}
+
+.schedule-icon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border: 2px solid white;
+  border-radius: 2px;
+}
+
+.schedule-icon::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.group-icon {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.person {
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+}
+
+.person::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 4px 4px 0 0;
+  bottom: -7px;
+  left: -1px;
+}
+
+.left-sidebar.expanded {
+  width: 300px;
+  background-color: white;
+  color: black;
+  border-right: 1px solid #eee;
+}
+
+.sidebar-header {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  color: white;
+}
+
+.sidebar-title {
+  display: none;
+}
+
+.left-sidebar.expanded .sidebar-title {
+  display: block;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.journey-list {
+  display: none;
+  padding: 1rem;
+}
+
+.left-sidebar.expanded .journey-list {
+  display: block;
+}
+
+.journey-list ul {
+  list-style: none;
+}
+
+.journey-list li {
+  padding: 0.5rem 0;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.journey-list li:first-child {
+  font-weight: bold;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  color: #666;
+  line-height: 1.6;
+}
+
+.side-nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 300px;
+  width: 50px;
+  background-color: #000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.note-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  margin-top: 2rem;
+  letter-spacing: 2px;
+  color: #fff;
+}
+.card {
+  width: 600px;
+  height: 600px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-header {
+  display: flex;
+  background-color: #333;
+  width: 550px;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h2 {
+  margin-left: 180px;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+}
+
+.info-icon {
+  font-size: 18px;
+  color:white;
+  cursor: pointer;
+}
+
+.description {
+  margin: 15px 0;
+  font-size: 14px;
+  color: #555;
+  text-align: left;
+}
+
+.video-container {
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%; 
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.sum{
+    margin-right: 400px;
+}
+
+.thread-section {
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #fdfdfd;
+}
+
+.thread-header {
+  background-color: #f7f7f7;
+  padding: 8px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.inputs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+textarea {
+  width: calc(50% - 10px);
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  resize: none;
+  height: 50px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.icons button {
+  background: none;
+  margin-left: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.icons button:hover {
+  color: #007bff;
+}
+
+.selectors select {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add-thread {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  margin-right: 350px;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.add-thread:hover {
+  background-color: #0056b3;
+}
+
+.summary {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none;
+  height: 60px;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}.container1{
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.article-form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.content-editor {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.toolbar {
+  background: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+  padding: 5px;
+  display: flex;
+  gap: 5px;
+}
+
+.toolbar button {
+  background: none;
+  border: none;
+  font-size: 12px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.toolbar button:hover {
+  background: #e0e0e0;
+}
+
+.toolbar button:focus {
+  outline: none;
+  background: #ccc;
+}.accordion {
+  border-top: 1px solid #ddd;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.accordion-header span {
+  font-weight: bold;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.accordion-content {
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-right: 90px;
+  font-size: 16px;
+}
+.thr{
+  background: #f7f7f7;
+  padding: 10px;
+  width: 450px;
+  border:1px solid #555;
+  border-radius: 6px;
+}
+.accordion-content h2{
+  color: gray;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-left: 350px;
+  font-size: 14px;
+}
+
+.nested-content  {
+  margin-top: 10px;
+  font-size: 14px;
+  border:1px solid #555;
+
+  background: #f7f7f7;
+  padding: 10px;
+  border-radius: 6px;
+}
+.nested-content p{
+  margin-right: 350px;
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
+}
